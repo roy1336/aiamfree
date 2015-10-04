@@ -1,0 +1,193 @@
+<html>
+	<head>
+		<title> aIamfree </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/diseño.css">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap-js/bootstrap.min.js"></script>	
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+	   				<div class="navbar-header col-md-2">
+	      				<a class="navbar-brand" href="index.html"><label class="lyrics">aIamfree</label></a>
+	    			</div>
+					<div class="col-md-5 buscador">
+					    <div class="input-group">
+					      <span class="input-group-btn">
+					        <a class="btn btn-default" href="resultados.html">Buscar</a>
+					      </span>
+					      <input type="text" class="form-control" placeholder="Freelance">
+					    </div>
+					</div>
+					<ul class="nav navbar-nav col-md-5">
+	        			<form class="navbar-form navbar-right" role="login">
+						  <button type="submit" class="btn btn-default">Salir</button>
+						</form>
+	      			</ul>
+			</nav>	
+		</header>
+		<div class="container">
+			<div class="col-md-8 col-md-offset-2">
+				<h2>Mi Perfil</h2>			
+				<ul class="nav nav-tabs nav-justified" role="tablist">
+				    <li role="presentation" >
+				    	<a href="#info" aria-controls="info" role="tab" data-toggle="tab">Información Básica</a>
+				    </li>
+				    <li role="presentation" class="active">
+				    	<a href="#proyectos" aria-controls="proyectos" role="tab" data-toggle="tab">Proyectos</a>
+				    </li>
+				    <li role="presentation">
+				    	<a href="#cuenta" aria-controls="cuenta" role="tab" data-toggle="tab">Cuenta</a>
+				    </li>
+				</ul>
+				<!--CONTENIDO TABS-->
+				<div class="tab-content">
+					<!--CONTENIDO INFORMACION BASICA-->
+					<div role="tabpanel" class="tab-pane" id="info">
+						<form>
+							<div class="form-group">
+							  <label for="nombre">Nombre:</label>
+							  <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo">
+							</div>
+							<div class="form-group">
+							  <label for="email">Email:</label>
+							  <input type="email" class="form-control" id="email" placeholder="correo@freelance.com">
+							</div>
+							<form class="form-inline container-fluid">
+									<div class="form-group col-md-6">
+										<label for="pais">Pais</label>
+									  	<select id="pais"class="form-control">
+											<option>México</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="estado">Estado</label>
+										<select id="estado" class="form-control">
+											<option>D.F</option>
+											<option>Jalisco</option>
+											<option>Nuevo León</option>
+											<option>Sonora</option>
+											<option>Veracruz</option>
+										</select>
+									</div>
+							</form>
+							<h3>Redes Sociales</h3>
+							<form class="form-inline">
+								<div class="form-group">
+								  <label for="social">Twitter</label>
+								  <input type="text" class="form-control" id="social-twitter" placeholder="twitter">
+								</div>
+							</form>
+							
+							<form class="form-inline">
+								<div class="form-group">
+								  <label for="social">Facebook</label>
+								  <input type="text" class="form-control" id="social-facebook" placeholder="facebook">
+								</div>
+							</form>
+							<form class="form-inline">
+								<div class="form-group">
+								  <label for="social">Instagram</label>
+								  <input type="text" class="form-control" id="social-instagram" placeholder="instagram">
+								</div>
+							</form>
+							<h3>Resumen Curriculum</h3>
+							<form class="form-inline">
+								<div class="form-group">
+								  <label for="profesion">Profesión o Carrera:</label>
+								  <input type="text" class="form-control" id="profesion" placeholder="profesión">
+								</div>
+							</form>
+							<form class="form-inline">
+								<div class="form-group">
+								  <label for="idioma">Idiomas:</label></br>
+								  <input type="checkbox" class="form-control" id="idioma-ingles" value="1">Inglés</br>
+								  <input type="checkbox" class="form-control" id="idioma-frances" value="2">Francés</br>
+								  <input type="checkbox" class="form-control" id="idioma-aleman" value="3">Aleman</br>
+								  <input type="checkbox" class="form-control" id="idioma-koreano" value="4">Koreano</br>
+								</div>
+							</form>
+							<form class="form-inline">
+								<div class="form-group">
+								  <label for="habilidad">Competencias(habilidades):</label>
+								  <input type="text" class="form-control" id="habilidad" placeholder="habilidades">
+								  <button id="boton-hab" type="button" class="btn btn-default ">Agregar</button>
+								</div>
+							</form>
+							<div class = "container-fluid">
+							<ul id = "lista-hab">
+							</ul>
+							</div>
+
+							<button type="submit" class="btn btn-primary btn-lg">Actualizar</button>
+							
+
+						</form>
+					</div>
+<script type="text/javascript">
+$(function(){
+	$('#boton-hab').click(function(){
+		elemento=$('#habilidad').val();
+		if(elemento !== ''){
+			$('#lista-hab').append('<li>'+elemento+'</li>');
+	}
+	$('#habilidad').val('');
+	});
+});
+</script>
+					<!--CONTENIDO PROYECTOS-->
+					<div role="tabpanel" class="tab-pane active" id="proyectos">
+						<h3>Agregar Proyecto</h3>
+						<div class="form-group col-md-6">
+							<label for="link">Link</label>
+	    					<input type="text" class="form-control" id="link" placeholder="http//:www.link.com">
+						</div>
+						<div class="form-group col-md-6">
+	    					<label for="img-proy">Imagen del proyecto:</label>
+	    					<input type="file" id="img-proy" accept="image/*">
+	    					<p class="help-block">Sube una imagen de tu proyecto, da un descripción breve y un link si es necesario</p>
+	  					</div>
+						<div class="form-group col-md-12">
+							<label for="description">Descripción</label>
+							<textarea id="description" class="form-control" rows="2"></textarea>
+							<button id="boton-proy" type="button" class="btn btn-default">Agregar Proyecto</button>
+						</div>
+						<h3>Mis Proyectos</h3>
+						<div class="col-md-4">
+							<img src="img/ingeniero.jpg" class="img-thumbnail">
+						</div>
+						<div class="col-md-8">
+							<div class="jumbotron link-proy">
+								<a href="#"><h4>mylink.com</h4></a>
+								<p>Descripción Descripción DescripciónDescripción Descripción
+								Descripción Descripción Descripción Descripción Descripción Descripción</p>
+							</div>
+							<button type="button" class="btn btn-default">Editar</button>
+							<button type="button" class="btn btn-default">Borrar</button>
+						</div>
+							
+					</div>
+
+					<!--CONTENIDO CUENTA-->
+					<div role="tabpanel" class="tab-pane" id="cuenta">
+						<form class="form-inline container">
+							<div class="form-group col-md-6">
+								<label for="pais">Disponibilidad</label>
+							  	<select id="pais"class="form-control">
+									<option>Diponible</option>
+									<option>No Disponible</option>
+								</select>
+							</div>
+						</form>
+						<h3>Amplia tu cuenta</h3>
+					</div>
+				 </div>
+			</div>
+		</div>
+		<footer>
+		</footer>
+	</body>
+</html>

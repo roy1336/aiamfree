@@ -1,0 +1,62 @@
+
+
+
+a.trenddings{
+	text-align: center;
+}
+.navbar{
+	background-color: #01C3A8;
+	color: #fff;
+}
+label.lyrics{
+	color: #ffffff;
+}
+div.contenido1{
+	height: 60%;
+	width: auto;
+	margin: 1%;
+}
+div.contenido2{
+	height: auto;
+	width: auto;
+	margin: 1%;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+body:nth-child(2){
+	margin-top: 5%;
+}
+
+div.buscador{
+	margin-top: 0.6%;
+}
+
+div.link-proy{
+	margin-top: 1%;
+	padding: 0%;
+}
+
+div.tab-pane{
+	margin-top: 2.5%;
+}
+
+.logueado{
+	display: none;
+}
+
+.resultado{
+	border-radius: 1em;
+	background-color: #CCC;
+	padding-top:2%;
+	padding-left:2%;
+	padding-bottom:2%;
+}
+
+.resultado a:hover{
+	color:black;
+}
+
+.resultado a{
+	color:black;
+}
+

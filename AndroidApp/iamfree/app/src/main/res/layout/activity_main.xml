@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/bar_buscar"
+        android:background="#ffffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:width="200dp"
+            android:id="@+id/editText2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/button"
+            android:background="@drawable/search_logo"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:onClick="buscar_trending"
+            android:layout_toRightOf="@+id/editText2"
+            android:layout_toEndOf="@+id/editText2"
+            android:layout_marginTop="11dp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/bar_buscar"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lo más buscado:"
+        android:textSize="16sp"
+        android:id="@+id/title_trending"
+        android:layout_below="@+id/viewPager"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <View
+        android:layout_height="1dp"
+        android:id="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_trending"
+        android:layout_width="200dp"
+        android:background="#ffcccccc" />
+
+    <TableLayout
+        android:id="@+id/cuerpo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:gravity="center_horizontal">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Fotógrafo"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:textSize="14sp"
+                android:onClick="buscar_trending"
+                android:layout_marginRight="20dp"
+                android:id="@+id/trending1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="buscar_trending"             android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Diseñador"
+                android:id="@+id/trending2"/>
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="buscar_trending"             android:text="Arquitecto"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:id="@+id/trending3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="buscar_trending"              android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Carpintero"
+                android:gravity="center_horizontal"
+                android:id="@+id/trending4"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="buscar_trending"
+                android:textSize="14sp"
+                android:text="Mariachi"
+                android:layout_marginRight="20dp"
+                android:id="@+id/trending5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:onClick="buscar_trending"           android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Programador"
+                android:gravity="center_horizontal"
+                android:id="@+id/trending6"/>
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>

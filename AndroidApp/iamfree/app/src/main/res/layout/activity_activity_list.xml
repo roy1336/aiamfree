@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.roger.portfolio.activity_list">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/bar_buscar"
+        android:background="#ffffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:width="200dp"
+            android:id="@+id/editText2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/button"
+            android:background="@drawable/search_logo"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/editText2"
+            android:layout_toEndOf="@+id/editText2"
+            android:layout_marginTop="11dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/bar_buscar"
+        android:id="@+id/mylinear"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+</RelativeLayout>
